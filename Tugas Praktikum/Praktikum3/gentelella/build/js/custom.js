@@ -383,23 +383,23 @@ function init_flot_chart() {
     var chart_plot_02_data = [];
 
     var chart_plot_03_data = [
-        [0, 1],
+        [0, 30],
         [1, 9],
         [2, 6],
         [3, 10],
         [4, 5],
-        [5, 17],
+        [5, 25],
         [6, 6],
-        [7, 10],
+        [7, 20],
         [8, 7],
         [9, 11],
-        [10, 35],
+        [10, 20],
         [11, 9],
         [12, 12],
         [13, 5],
         [14, 3],
-        [15, 4],
-        [16, 9]
+        [15, 20],
+        [16, 30]
     ];
 
 
@@ -457,7 +457,7 @@ function init_flot_chart() {
         grid: {
             show: true,
             aboveData: true,
-            color: "#3f3f3f",
+            color: "#B80000",
             labelMargin: 10,
             axisMargin: 0,
             borderWidth: 0,
@@ -493,8 +493,8 @@ function init_flot_chart() {
             width: 40,
             height: 1
         },
-        colors: ['#96CA59', '#3F97EB', '#72c380', '#6f7a8a', '#f7cb38', '#5a8022', '#2c7282'],
-        shadowSize: 0,
+        colors: [ '#3F97EB', '#72c380', '#6f7a8a', '#f7cb38', '#5a8022', '#2c7282'],
+        shadowSize: 10,
         tooltip: true,
         tooltipOpts: {
             content: "%s: %y.0",
@@ -525,7 +525,7 @@ function init_flot_chart() {
                 monotonicFit: true
             }
         },
-        colors: ["#26B99A"],
+        colors: ["#7D0A0A"],
         grid: {
             borderWidth: {
                 top: 0,
@@ -556,7 +556,7 @@ function init_flot_chart() {
                 label: "Email Sent",
                 data: chart_plot_02_data,
                 lines: {
-                    fillColor: "rgba(150, 202, 89, 0.12)"
+                    fillColor: "rgba(125, 10, 10, 0.12)"
                 },
                 points: {
                     fillColor: "#fff"
@@ -628,7 +628,7 @@ function init_JQVmap() {
             enableZoom: true,
             showTooltip: true,
             values: sample_data,
-            scaleColors: ['#E6F2F0', '#149B7E'],
+            scaleColors: ['#5D3587', '#FFD1E3'],
             normalizeFunction: 'polynomial'
         });
 
@@ -697,13 +697,13 @@ function init_chart_doughnut() {
                     "IOS"
                 ],
                 datasets: [{
-                    data: [15, 20, 30, 10, 30],
+                    data: [20, 10, 30, 10, 30],
                     backgroundColor: [
-                        "#BDC3C7",
-                        "#9B59B6",
+                        "#FFB534",
+                        "#C1F2B0",
                         "#E74C3C",
-                        "#26B99A",
-                        "#3498DB"
+                        "#7E30E1",
+                        "#C21292"
                     ],
                     hoverBackgroundColor: [
                         "#CFD4D8",
@@ -747,11 +747,11 @@ function init_gauge() {
         pointer: {
             length: 0.75,
             strokeWidth: 0.042,
-            color: '#1D212A'
+            color: '#E26EE5'
         },
         limitMax: 'false',
         colorStart: '#1ABC9C',
-        colorStop: '#1ABC9C',
+        colorStop: '#E26EE5',
         strokeColor: '#F0F3F3',
         generateGradient: true
     };
@@ -769,7 +769,7 @@ function init_gauge() {
 
         chart_gauge_01.maxValue = 6000;
         chart_gauge_01.animationSpeed = 32;
-        chart_gauge_01.set(3200);
+        chart_gauge_01.set(5200);
         chart_gauge_01.setTextField(document.getElementById("gauge-text"));
 
     }
@@ -802,7 +802,7 @@ function init_sparklines() {
     console.log('init_sparklines');
 
 
-    $(".sparkline_one").sparkline([2, 4, 3, 4, 5, 4, 5, 4, 3, 4, 5, 6, 4, 5, 6, 3, 5, 4, 5, 4, 5, 4, 3, 4, 5, 6, 7, 5, 4, 3, 5, 6], {
+    $(".sparkline_one").sparkline([1, 2, 3, 4, 5, 4, 5, 4, 3, 4, 5, 6, 4, 5, 6, 3, 5, 4, 5, 4, 5, 4, 3, 4, 5, 6, 7, 5, 4, 3, 5, 6], {
         type: 'bar',
         height: '125',
         barWidth: 13,
@@ -810,7 +810,7 @@ function init_sparklines() {
             '7': '#a1a1a1'
         },
         barSpacing: 2,
-        barColor: '#26B99A'
+        barColor: '#BF3131'
     });
 
 
@@ -846,18 +846,18 @@ function init_sparklines() {
             '7': '#a1a1a1'
         },
         barSpacing: 2,
-        barColor: '#26B99A'
+        barColor: '#5D3587'
     });
 
 
-    $(".sparkline22").sparkline([2, 4, 3, 4, 7, 5, 4, 3, 5, 6, 2, 4, 3, 4, 5, 4, 5, 4, 3, 4, 6], {
+    $(".sparkline22").sparkline([3, 1, 3, 4, 3, 3, 3, 3, 5, 6, 7, 8, 8, 1, 5, 4, 5, 4, 3, 4, 6], {
         type: 'line',
         height: '40',
         width: '200',
-        lineColor: '#26B99A',
+        lineColor: '#5D3587',
         fillColor: '#ffffff',
         lineWidth: 3,
-        spotColor: '#34495E',
+        spotColor: '#B80000',
         minSpotColor: '#34495E'
     });
 
@@ -2203,6 +2203,66 @@ function init_charts() {
         });
 
     }
+    if ($('#mybarChart1').length) {
+
+        var ctx = document.getElementById("mybarChart1");
+        var mybarChart1 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: '# of Votes',
+                    backgroundColor: "#26B99A",
+                    data: [51, 30, 40, 28, 92, 50, 45]
+                }, {
+                    label: '# of Votes',
+                    backgroundColor: "#03586A",
+                    data: [41, 56, 25, 48, 72, 34, 12]
+                }]
+            },
+
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    }
+    if ($('#mybarChart2').length) {
+
+        var ctx = document.getElementById("mybarChart2");
+        var mybarChart2 = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [{
+                    label: '# of Votes',
+                    backgroundColor: "#26B99A",
+                    data: [51, 30, 40, 28, 92, 50, 45]
+                }, {
+                    label: '# of Votes',
+                    backgroundColor: "#03586A",
+                    data: [41, 56, 25, 48, 72, 34, 12]
+                }]
+            },
+
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+    }
 
 
     // Doughnut chart
@@ -2574,23 +2634,23 @@ function init_morris_charts() {
         Morris.Bar({
             element: 'graph_bar',
             data: [
-                { device: 'iPhone 4', geekbench: 380 },
+                { device: 'iPhone 4', geekbench: 300 },
                 { device: 'iPhone 4S', geekbench: 655 },
                 { device: 'iPhone 3GS', geekbench: 275 },
                 { device: 'iPhone 5', geekbench: 1571 },
-                { device: 'iPhone 5S', geekbench: 655 },
+                { device: 'iPhone 5S', geekbench: 1600 },
                 { device: 'iPhone 6', geekbench: 2154 },
-                { device: 'iPhone 6 Plus', geekbench: 1144 },
+                { device: 'iPhone 6 Plus', geekbench: 2550 },
                 { device: 'iPhone 6S', geekbench: 2371 },
-                { device: 'iPhone 6S Plus', geekbench: 1471 },
+                { device: 'iPhone 6S Plus', geekbench: 3071 },
                 { device: 'Other', geekbench: 1371 }
             ],
             xkey: 'device',
             ykeys: ['geekbench'],
             labels: ['Geekbench'],
             barRatio: 0.4,
-            barColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
-            xLabelAngle: 35,
+            barColors: ['#711DB0', '#34495E', '#ACADAC', '#3498DB'],
+            xLabelAngle: 90,
             hideHover: 'auto',
             resize: true
         });

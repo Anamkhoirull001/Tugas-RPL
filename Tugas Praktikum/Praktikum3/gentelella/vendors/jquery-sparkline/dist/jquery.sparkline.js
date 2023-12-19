@@ -1713,8 +1713,8 @@
         type: 'bar',
 
         init: function (el, values, options, width, height) {
-            var barWidth = parseInt(options.get('barWidth'), 10),
-                barSpacing = parseInt(options.get('barSpacing'), 10),
+            var barWidth = parseInt(options.get('barWidth'), 20),
+                barSpacing = parseInt(options.get('barSpacing'), 12),
                 chartRangeMin = options.get('chartRangeMin'),
                 chartRangeMax = options.get('chartRangeMax'),
                 chartRangeClip = options.get('chartRangeClip'),
