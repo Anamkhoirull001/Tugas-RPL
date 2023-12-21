@@ -310,10 +310,12 @@
                       <div class="profile_img">
                         <div id="crop-avatar">
                           <!-- Current avatar -->
-                          <img class="img-responsive avatar-view" src="images/picture.jpg" alt="Avatar" title="Change the avatar">
+                          <div style="position: relative; width: 250px; height: 250px;">
+                            <img class="img-responsive avatar-view" style="position: absolute; width: 100%; height: 100%; object-fit: cover; border-radius: 20px;" src="images/yuhu.jpg" alt="Avatar" title="Change the avatar">
+                          </div>
                         </div>
                       </div>
-                      <h3>Samuel Doe</h3>
+                      <h3>Diki Bulin</h3>
 
                       <ul class="list-unstyled user_data">
                         <li><i class="fa fa-map-marker user-profile-icon"></i> San Francisco, California, USA
@@ -338,19 +340,19 @@
                         <li>
                           <p>Web Applications</p>
                           <div class="progress progress_sm">
-                            <div class="progress-bar bg-purple" role="progressbar" data-transitiongoal="90"></div>
+                            <div class="progress-bar" style="background-color: #FF90BC;" role="progressbar" data-transitiongoal="90"></div>
                           </div>
                         </li>
                         <li>
                           <p>Website Design</p>
                           <div class="progress progress_sm">
-                            <div class="progress-bar bg-purple" role="progressbar" data-transitiongoal="70"></div>
+                            <div class="progress-bar " style="background-color: #FFC0D9;" role="progressbar" data-transitiongoal="70"></div>
                           </div>
                         </li>
                         <li>
                           <p>Automation & Testing</p>
                           <div class="progress progress_sm">
-                            <div class="progress-bar bg-purple" role="progressbar" data-transitiongoal="10"></div>
+                            <div class="progress-bar" style="background-color: #8ACDD7;" role="progressbar" data-transitiongoal="40"></div>
                           </div>
                         </li>
                         <li>
@@ -367,7 +369,7 @@
 
                       <div class="profile_title">
                         <div class="col-md-6">
-                          <h2>Smartphone Benchmark</h2>
+                          <h2>My Job Activity</h2>
                         </div>
                         <div class="col-md-6">
                           <div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
@@ -377,7 +379,8 @@
                         </div>
                       </div>
                       <!-- start of user-activity-graph -->
-                      <div id="graph_bar" style="width:100%; height:280px;"></div>
+                      <!-- <div id="graph_bar" style="width:100%; height:280px;"></div> -->
+                      <div id="mainb1" style="height:350px;"></div>
                       <!-- end of user-activity-graph -->
 
                       <div class="" role="tabpanel" data-example-id="togglable-tabs">
@@ -568,6 +571,8 @@
     <!-- bootstrap-daterangepicker -->
     <script src="../vendors/moment/min/moment.min.js"></script>
     <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- ECharts -->
+    <script src="../vendors/echarts/dist/echarts1.js"></script>
     
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.js"></script>

@@ -3026,7 +3026,7 @@ function init_echarts() {
             calculable: false,
             xAxis: [{
                 type: 'category',
-                data: ['1?', '2?', '3?', '4?', '5?', '6?', '7?', '8?', '9?', '10?', '11?', '12?']
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dev']
             }],
             yAxis: [{
                 type: 'value'
@@ -3034,7 +3034,10 @@ function init_echarts() {
             series: [{
                 name: 'sales',
                 type: 'bar',
-                data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3],
+                data: [200, 120, 40, 83.2, 65.6, 76.7, 135.6, 162.2, 32.6, 20.0, 64, 70],
+                itemStyle: {
+                  color:"#5D3587"
+                },
                 markPoint: {
                     data: [{
                         type: 'max',
@@ -3053,7 +3056,10 @@ function init_echarts() {
             }, {
                 name: 'purchases',
                 type: 'bar',
-                data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3],
+                data: [160, 150, 90, 76.4, 98.7, 70.7, 175.6, 182.2, 48.7, 98.8, 60, 40],
+                itemStyle: {
+                  color:"#FFB534"
+                },
                 markPoint: {
                     data: [{
                         name: 'sales',
@@ -3062,9 +3068,87 @@ function init_echarts() {
                         yAxis: 183,
                     }, {
                         name: 'purchases',
-                        value: 2.3,
+                        value: 40,
                         xAxis: 11,
-                        yAxis: 3
+                        yAxis: 40
+                    }]
+                },
+                markLine: {
+                    data: [{
+                        type: 'average',
+                        name: '???'
+                    }]
+                }
+            }]
+        });
+
+    }
+    if ($('#mainb1').length) {
+
+        var echartBar = echarts.init(document.getElementById('mainb1'), theme);
+
+        echartBar.setOption({
+            title: {
+                text: 'Job Activity',
+                subtext: ''
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['design', 'skecth']
+            },
+            toolbox: {
+                show: false
+            },
+            calculable: false,
+            xAxis: [{
+                type: 'category',
+                data: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dev']
+            }],
+            yAxis: [{
+                type: 'value'
+            }],
+            series: [{
+                name: 'design',
+                type: 'bar',
+                data: [170, 120, 40, 83.2, 65.6, 76.7, 135.6, 162.2, 32.6, 20.0, 64, 70],
+                itemStyle: {
+                  color:"#FB8B24"
+                },
+                markPoint: {
+                    data: [{
+                        type: 'max',
+                        name: '???'
+                    }, {
+                        type: 'min',
+                        name: '???'
+                    }]
+                },
+                markLine: {
+                    data: [{
+                        type: 'average',
+                        name: '???'
+                    }]
+                }
+            }, {
+                name: 'skecth',
+                type: 'bar',
+                data: [160, 150, 90, 76.4, 98.7, 70.7, 175.6, 182.2, 48.7, 98.8, 60, 40],
+                itemStyle: {
+                  color:"#5F0F40"
+                },
+                markPoint: {
+                    data: [{
+                        name: 'design',
+                        value: 182.2,
+                        xAxis: 7,
+                        yAxis: 183,
+                    }, {
+                        name: 'skecth',
+                        value: 40,
+                        xAxis: 11,
+                        yAxis: 40
                     }]
                 },
                 markLine: {
