@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "blekiimut", "rpl");
+$connect = mysqli_connect("localhost", "root", "", "rpl");
 $first_name = $_POST['first_name'];
 $middle_name = $_POST['middle_name'];
 $last_name = $_POST['last_name'];
